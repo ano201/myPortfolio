@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import CloseIcon from '@mui/icons-material/Close'
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -9,13 +10,14 @@ import { HashLink } from 'react-router-hash-link';
 import { Grid } from '@mui/material';
 import NavDrawer from './NavDrawer/NavDrawer';
 import logo from '../../../images/logo.png';
-
+import classNames from 'classnames';
 
 
 
 
 const Navigation = () => {
 
+    const [open, setOpen] = useState(false);
     const [state, setState] = useState({
         right: false
     });
@@ -26,6 +28,7 @@ const Navigation = () => {
         }
 
         setState({ ...state, [anchor]: open });
+        setOpen(true);
     };
 
     return (
@@ -64,11 +67,12 @@ const Navigation = () => {
                             onClick={toggleDrawer('right', true)}
                         >
                             <MenuIcon />
+                            <CloseIcon className={classNames({'open': open})} />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
             </Box>
-            <NavDrawer toggleDrawer={toggleDrawer} state={state} ></NavDrawer>
+            <NavDrawer toggleDrawer={toggleDrawer} state={state} osetOpen={setOpen} ></NavDrawer>
         </div>
     );
 };

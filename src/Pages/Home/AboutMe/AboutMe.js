@@ -8,7 +8,7 @@ const AboutMe = () => {
     return (
         <Box sx={{ flexGrow: 1, mt: '10rem' }} id='aboutme'>
             <Grid container>
-                <Grid md={6} sm={12} sx={{ mt: { md: '10rem', sm: '5rem', lg: '5rem', xs: '5rem' } }}>
+                <Grid md={6} sm={12} sx={{ mt: { md: '10rem', lg: '5rem'} }}>
                     <img src={aboutMe} alt="" />
                 </Grid>
                 <Grid md={6} sm={12}>

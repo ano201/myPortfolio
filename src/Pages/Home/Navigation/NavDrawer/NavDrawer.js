@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 
-const NavDrawer = ({ toggleDrawer, state }) => {
+const NavDrawer = ({ toggleDrawer, state, setOpen}) => {
 
     const classes = useStyles();
 
@@ -25,7 +25,7 @@ const NavDrawer = ({ toggleDrawer, state }) => {
                 classes={{ paper: classes.paper }}
                 anchor='right'
                 open={state['right']}
-                onClose={toggleDrawer('right', false)}
+                onClose={toggleDrawer('right', false), ()=>{setOpen(false)}}
             >
                 <HashLink className='link link-nav-drawer' style={{ fontSize: '3rem', color: '#A3E4D7' }} to='/home#home'>Murad</HashLink>
                 <HashLink className='link link-nav-drawer' to='/home#home'>Home</HashLink>

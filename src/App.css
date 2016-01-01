@@ -60,3 +60,9 @@
 img {
   width: 100%;
 }
+.open{
+    display: none;
+}
+.close{
+    display: block;
+}
