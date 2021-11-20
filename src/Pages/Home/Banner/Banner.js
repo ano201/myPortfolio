@@ -12,7 +12,8 @@ const Banner = () => {
                     Md. Murad Hossain
                 </Typography>
                 <Typography className='dark-text' sx={{ fontWeight: 'bold', mt: -3 }} variant="h3" component="div" gutterBottom>
-                    Md. Murad Hossain
+                    I'm a Frontend web devloper
+    I develop users interface...
                 </Typography>
             </Grid>
         </Box>
