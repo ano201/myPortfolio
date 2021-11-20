@@ -4,17 +4,24 @@ import React from 'react';
 const Banner = () => {
     return (
         <Box>
-            <Grid sx={{ flexGrow: 1 }}>
+            <Grid sx={{ flexGrow: 1, mt: '8rem' }} sm={12} md={8}>
                 <Typography className='neon-text' variant="h5" component="div" gutterBottom>
                     Hi, My name is
                 </Typography>
-                <Typography className='light-text' sx={{ fontWeight: 'bold' }} variant="h3" component="div" gutterBottom>
-                    Md. Murad Hossain
-                </Typography>
-                <Typography className='dark-text' sx={{ fontWeight: 'bold', mt: -3 }} variant="h3" component="div" gutterBottom>
-                    I'm a Frontend web devloper
-    I develop users interface...
-                </Typography>
+                <Grid sx={{ ml: 2 }}>
+                    <Typography className='light-text' sx={{ fontWeight: 'bold', mt: 2 }} variant="h2" component="div" gutterBottom>
+                        Murad
+                    </Typography>
+                    <Typography className='dark-text' sx={{ fontWeight: 'bold', mt: -2 }} variant="h3" component="div" gutterBottom>
+                        I build users interface...
+                    </Typography>
+                    <Typography className='dark-text' sx={{ fontWeight: 'bold', mt: '3rem' }} variant="h5" component="div" gutterBottom>
+                        I don’t like to define myself by the work I’ve done. I define myself by the work I want to do.
+                    </Typography>
+                    <Grid sx={{ fontWeight: 'bold', mt: 2 }}>
+                        <button className='hovered-btn'>Explore</button>
+                    </Grid>
+                </Grid>
             </Grid>
         </Box>
     );

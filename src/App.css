@@ -12,3 +12,21 @@
 .dark-text{
   color: #117864;
 }
+.hovered-btn{
+  width: 200px;
+  height: 60px;
+  font-size: 25px;
+  border: 1px solid #4df1aa;
+  color: #A3E4D7;
+  background-color: #0a192f;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 #4df1aa;
+  transition: ease-out 0.2s;
+  outline: none;
+  font-weight: bold;
+}
+.hovered-btn:hover{
+  box-shadow: inset 200px 0 0 0 #4df1aa;
+  cursor: pointer;
+  color: #0a192f;
+}
