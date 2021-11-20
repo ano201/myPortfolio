@@ -6,7 +6,7 @@ const Banner = () => {
         <Box>
             <Grid sx={{ flexGrow: 1, mt: '8rem' }} sm={12} md={8}>
                 <Typography className='neon-text' variant="h5" component="div" gutterBottom>
-                    Hi, My name is
+                    Hi, I am
                 </Typography>
                 <Grid sx={{ ml: 2 }}>
                     <Typography className='light-text' sx={{ fontWeight: 'bold', mt: 2 }} variant="h2" component="div" gutterBottom>
