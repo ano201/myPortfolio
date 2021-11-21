@@ -5,15 +5,10 @@ import Navigation from './../Navigation/Navigation';
 
 
 const Home = () => {
-
-  return (
-    <Box sx={{ flexGrow: 1 }}>
             
-=======
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Navigation></Navigation>
->>>>>>> b7b5aadc0c6eacaa98bc454b47ccb16df9e06650
             <Container>
                 <Grid container>
                     <Grid>
@@ -21,8 +16,8 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Container>
-        </Box>
-  );
+</Box>
+  )
 };
 
 export default Home;
