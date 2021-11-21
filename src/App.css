@@ -1,7 +1,5 @@
 .app{
   background-color: #0a192f;
-  height: 100vh;
-  width: 100vw;
 }
 .neon-text{
   color: #4df1aa;
@@ -21,7 +19,7 @@
   background-color: #0a192f;
   border-radius: 5px;
   box-shadow: inset 0 0 0 0 #4df1aa;
-  transition: ease-out 0.2s;
+  transition: ease-out 0.4s;
   outline: none;
   font-weight: bold;
 }
