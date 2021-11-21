@@ -4,7 +4,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <Box>
-            <Grid sx={{ flexGrow: 1, mt: '8rem' }} sm={12} md={8}>
+            <Grid sx={{ flexGrow: 1, mt: '4rem' }} sm={12} md={8}>
                 <Typography className='neon-text' variant="h5" component="div" gutterBottom>
                     Hi, I am
                 </Typography>
