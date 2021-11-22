@@ -31,14 +31,16 @@
 .link{
     text-decoration: none;
     font-weight: bold;
-    transition: 1s;
 }
 .link:link,.link:active,.link:visited{
     color: #4df1aa;
 }
 .link-nav{
-    padding: 5px 3px;
+    padding: 5px 10px;
 }
 .link-nav:hover{
     border: 1px dashed #4df1aa;
+}
+img{
+  width: 100%;
 }
