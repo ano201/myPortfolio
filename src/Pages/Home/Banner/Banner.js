@@ -1,5 +1,6 @@
 import { Typography, Box, Grid } from '@mui/material';
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const Banner = () => {
     return (
@@ -19,7 +20,7 @@ const Banner = () => {
                         I don’t like to define myself by the work I’ve done. I define myself by the work I want to do.
                     </Typography>
                     <Grid sx={{ fontWeight: 'bold', mt: 2 }}>
-                        <button className='hovered-btn'>Explore</button>
+ <HashLink to='/home#aboutme'><button className='hovered-btn'>Explore</button></HashLink>
                     </Grid>
                 </Grid>
             </Grid>

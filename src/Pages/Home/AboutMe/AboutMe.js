@@ -5,7 +5,7 @@ import aboutMe from '../../../images/aboutMe.png';
 
 const AboutMe = () => {
     return (
-        <Box sx={{ flexGrow: 1, mt: '6rem' }}>
+        <Box sx={{ flexGrow: 1, mt: '6rem' }} id='aboutme'>
             <Grid container>
                 <Grid md={6} sm={12}>
                     <img src={aboutMe} alt="" />
