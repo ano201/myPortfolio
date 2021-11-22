@@ -12,7 +12,7 @@ function App() {
     <div className='app'>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
+          <Route path={['/', '/home']}>
             <Home />
           </Route>
         </Switch>
