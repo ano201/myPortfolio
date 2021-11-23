@@ -1,12 +1,15 @@
 import React from 'react';
 import Drawer from '@mui/material/Drawer';
-
+	
 
 const NavDrawer = ({toggleDrawer, state}) => {
 
+	
+	
     return (
-        <div style={{ background: '#0a192f8e'}}>
+        <div>
             <Drawer
+				sx={{backgroundColor: "#0a192f8e"}}
                 anchor='right'
                 open={state['right']}
                 onClose={toggleDrawer('right', false)}
