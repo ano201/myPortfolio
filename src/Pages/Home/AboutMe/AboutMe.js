@@ -2,12 +2,13 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import aboutMe from '../../../images/aboutMe.png';
+import { HashLink } from 'react-router-hash-link';
 
 const AboutMe = () => {
     return (
         <Box sx={{ flexGrow: 1, mt: '6rem' }} id='aboutme'>
             <Grid container>
-                <Grid md={6} sm={12}>
+                <Grid md={6} sm={12} style={{marginTop: '5rem'}}>
                     <img src={aboutMe} alt="" />
                 </Grid>
                 <Grid md={6} sm={12}>
@@ -59,6 +60,9 @@ const AboutMe = () => {
                     >
                         You can read more about my biography, experience, skills, education and much more in the PDF attached bellow:
                     </Typography>
+                    <Grid sx={{ fontWeight: 'bold', mt: 2 }}>
+                        <HashLink to='/home#aboutme'><button className='hovered-btn'>Resume</button></HashLink>
+                    </Grid>
                 </Grid>
             </Grid>
         </Box>
