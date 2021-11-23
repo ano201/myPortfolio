@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,12 +7,25 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import { HashLink } from 'react-router-hash-link';
 import { Grid } from '@mui/material';
+import NavDrawer from './NavDrawer/NavDrawer';
 
 
 
 
 
-const Navigation = (props) => {
+const Navigation = () => {
+
+    const [state, setState] = useState({
+        right: false
+    });
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+    };
 
     return (
         <div>
@@ -39,12 +52,14 @@ const Navigation = (props) => {
                             color="inherit"
                             aria-label="open drawer"
                             sx={{ mr: 2, display: { md: 'none' } }}
+                            onClick={toggleDrawer('right', true)}
                         >
                             <MenuIcon />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
             </Box>
+            <NavDrawer toggleDrawer={toggleDrawer} state={state} ></NavDrawer>
         </div>
     );
 };
