@@ -1,15 +1,23 @@
 import React from 'react';
 import Drawer from '@mui/material/Drawer';
-	
+import { makeStyles } from '@mui/styles';
+
+
+const useStyles = makeStyles({
+  paper: {
+    backgroundColor: "#0a192f8e"
+  }
+});
+
 
 const NavDrawer = ({toggleDrawer, state}) => {
 
-	
+	const classes = useStyles();
 	
     return (
         <div>
             <Drawer
-				sx={{backgroundColor: "#0a192f8e"}}
+				classes={{ paper: classes.paper }}
                 anchor='right'
                 open={state['right']}
                 onClose={toggleDrawer('right', false)}

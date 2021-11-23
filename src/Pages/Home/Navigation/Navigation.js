@@ -24,7 +24,7 @@ const Navigation = () => {
             return;
         }
 
-        setState({ ...state, [anchor]: open });
+        setState({  ...state, [anchor]:open });
     };
 
     return (
