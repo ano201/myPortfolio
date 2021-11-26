@@ -24,13 +24,13 @@ const Navigation = () => {
             return;
         }
 
-        setState({  ...state, [anchor]:open });
+        setState({ ...state, [anchor]: open });
     };
 
     return (
         <div>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar style={{ background: '#0a192f8e'}} position="fixed">
+                <AppBar style={{ background: '#0a192f8e' }} position="fixed">
                     <Toolbar>
                         <Typography
                             variant="h6"
@@ -41,7 +41,7 @@ const Navigation = () => {
                             Murad
                         </Typography>
                         <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
-                            <HashLink className='link link-nav' to='/home#home'>Home</HashLink>                            
+                            <HashLink className='link link-nav' to='/home#home'>Home</HashLink>
                             <HashLink className='link link-nav' to='/home#aboutme'>About Me</HashLink>
                             <HashLink className='link link-nav' to='/home#projects'>Projects</HashLink>
                             <HashLink className='link link-nav' to='/home#home'>Resume</HashLink>
