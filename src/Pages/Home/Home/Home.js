@@ -3,6 +3,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import Navigation from './../Navigation/Navigation';
 import AboutMe from './../AboutMe/AboutMe';
+import ContactForm from '../Form/ContactForm';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
                 <Grid>
                     <Banner></Banner>
                     <AboutMe></AboutMe>
+                    <ContactForm></ContactForm>
                 </Grid>
             </Container>
         </Box>
