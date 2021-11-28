@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { HashLink } from 'react-router-hash-link';
 import { Grid } from '@mui/material';
 import NavDrawer from './NavDrawer/NavDrawer';
+import logo from '../../../images/logo.png';
 
 
 
@@ -32,6 +33,9 @@ const Navigation = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar style={{ background: '#0a192f8e' }} position="fixed">
                     <Toolbar>
+                        <Grid sx={{width: 1/6}}>
+                            <img style={{ width: '100%' }} src={logo} alt="" />
+                        </Grid>
                         <Typography
                             variant="h6"
                             noWrap

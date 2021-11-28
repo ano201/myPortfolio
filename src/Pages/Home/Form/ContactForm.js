@@ -8,15 +8,13 @@ import TextField from '@mui/material/TextField';
 const ContactForm = () => {
 
     return (
-        <Box>
+        <Box sx={{ flexGrow: 1, mt: '6rem' }}>
             <Paper
                 elevation={3}
                 sx={{ backgroundColor: 'inherit' }}
             >
                 <form>
-                    <TextField label="Email"
-                    InputLabelProps={{ className: 'textField' }}
-                    focused />
+                   
                 </form>
             </Paper>
         </Box>
