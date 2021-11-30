@@ -6,16 +6,16 @@ import { HashLink } from 'react-router-hash-link';
 
 const AboutMe = () => {
     return (
-        <Box sx={{ flexGrow: 1, mt: '6rem' }} id='aboutme'>
+        <Box sx={{ flexGrow: 1, mt: '10rem' }} id='aboutme'>
             <Grid container>
-                <Grid md={6} sm={12} style={{marginTop: '5rem'}}>
+                <Grid md={6} sm={12} sx={{ mt: { md: '10rem', sm: '5rem', lg: '5rem' } }}>
                     <img src={aboutMe} alt="" />
                 </Grid>
                 <Grid md={6} sm={12}>
                     <Typography
                         variant="h3"
                         component="div"
-                        sx={{ flexGrow: 1 }}
+                        sx={{ flexGrow: 1, textAlign: { xs: 'center', sm: 'center', md: 'left' } }}
                         className='light-text'
                     >
                         About Me

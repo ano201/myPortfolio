@@ -4,7 +4,6 @@ import Banner from '../Banner/Banner';
 import Navigation from './../Navigation/Navigation';
 import AboutMe from './../AboutMe/AboutMe';
 import ContactForm from '../Form/ContactForm';
-import CustomizedInputs from '../CustomizedInputs';
 
 
 const Home = () => {
@@ -17,7 +16,6 @@ const Home = () => {
                     <Banner></Banner>
                     <AboutMe></AboutMe>
                     <ContactForm></ContactForm>
-					<CustomizedInputs></CustomizedInputs>
                 </Grid>
             </Container>
         </Box>
