@@ -15,7 +15,7 @@ const AboutMe = () => {
                     <Typography
                         variant="h3"
                         component="div"
-                        sx={{ flexGrow: 1, textAlign: { xs: 'center', sm: 'center', md: 'left' } }}
+                        sx={{ flexGrow: 1, textAlign: { xs: 'center', sm: 'center', md: 'left' }, my: { xs: '2rem', sm: '2rem' } }}
                         className='light-text'
                     >
                         About Me

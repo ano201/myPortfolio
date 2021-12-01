@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 const Banner = () => {
     return (
         <Box id='home'>
-            <Grid sx={{ flexGrow: 1, mt: '10rem' }} sm={12} md={8}>
+            <Grid sx={{ flexGrow: 1, mt: { xs: '5rem', sm: '5rem', md: '10rem', lg: '10rem' } }} sm={12} md={8}>
                 <Typography className='neon-text' variant="h5" component="div" gutterBottom>
                     Hi, I am
                 </Typography>
