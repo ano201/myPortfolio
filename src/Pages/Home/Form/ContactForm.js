@@ -37,7 +37,7 @@ const ContactForm = () => {
                 sx={{ backgroundColor: 'inherit', px: 2, m: 'auto', width: { md: '90%' } }}
             >
                 <Typography
-                    variant="h4"
+                    variant="h5"
                     component="div"
                     sx={{ flexGrow: 1, mt: 2 }}
                     className='light-text'
@@ -45,7 +45,7 @@ const ContactForm = () => {
                 >
                     Would you like to work with me? Awesome!
                 </Typography>
-                <TextField label="Email"
+                <TextField label="Name"
                     className={classes.root}
                     InputProps={{ style: { color: '#4df1aa' } }}
                     InputLabelProps={{ style: { color: '#4df1aa' } }}
@@ -57,7 +57,7 @@ const ContactForm = () => {
                     InputLabelProps={{ style: { color: '#4df1aa' } }}
                     variant="outlined"
                 />
-                <TextField label="Email"
+                <TextField label="Message"
                     className={classes.root}
                     InputProps={{ style: { color: '#4df1aa' } }}
                     InputLabelProps={{ style: { color: '#4df1aa' } }}

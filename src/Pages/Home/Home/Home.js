@@ -4,6 +4,7 @@ import Banner from '../Banner/Banner';
 import Navigation from './../Navigation/Navigation';
 import AboutMe from './../AboutMe/AboutMe';
 import ContactForm from '../Form/ContactForm';
+import Footer from './../Footer/Footer';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
                     <ContactForm></ContactForm>
                 </Grid>
             </Container>
+            <Footer></Footer>
         </Box>
     )
 };
