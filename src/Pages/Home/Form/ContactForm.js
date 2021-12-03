@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import { makeStyles } from '@mui/styles';
-import { Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import { HashLink } from 'react-router-hash-link';
 
 const useStyles = makeStyles({
     root: {
@@ -23,7 +24,7 @@ const ContactForm = () => {
     const classes = useStyles();
 
     return (
-        <Box sx={{ flexGrow: 1, mt: '10rem' }}>
+        <Box id='contact' sx={{ flexGrow: 1, mt: '10rem' }}>
             <Typography
                 variant="h3"
                 component="div"
@@ -34,7 +35,7 @@ const ContactForm = () => {
             </Typography>
             <Paper
                 elevation={12}
-                sx={{ backgroundColor: 'inherit', px: 2, m: 'auto', width: { md: '90%' } }}
+                sx={{ backgroundColor: 'inherit', p: 2, m: 'auto', width: { md: '80%' } }}
             >
                 <Typography
                     variant="h5"
@@ -62,8 +63,12 @@ const ContactForm = () => {
                     InputProps={{ style: { color: '#4df1aa' } }}
                     InputLabelProps={{ style: { color: '#4df1aa' } }}
                     variant="outlined"
+                    multiline
+                    rows={4}
                 />
-
+                <Grid sx={{ fontWeight: 'bold', mt: 4, textAlign: 'center' }}>
+                    <HashLink to='/home#aboutme'><button className='hovered-btn'>Let's Talk</button></HashLink>
+                </Grid>
             </Paper>
         </Box>
     );

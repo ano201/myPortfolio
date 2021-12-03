@@ -33,8 +33,10 @@ const Navigation = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar style={{ background: '#0a192f8e' }} position="fixed">
                     <Toolbar>
-                        <Grid sx={{width: 1/6}}>
-                            <img style={{ width: '100%' }} src={logo} alt="" />
+                        <Grid sx={{ width: 1 / 6 }}>
+                            <HashLink className='link' to='/home#home'>
+                                <img style={{ width: '100%' }} src={logo} alt="" />
+                            </HashLink>
                         </Grid>
                         <Typography
                             variant="h6"
@@ -42,12 +44,15 @@ const Navigation = () => {
                             component="div"
                             sx={{ flexGrow: 1 }}
                         >
-                            Murad
+                            <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
+                                <HashLink className='link' to='/home#home'>Murad</HashLink>
+                            </Grid>
                         </Typography>
                         <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
                             <HashLink className='link link-nav' to='/home#home'>Home</HashLink>
                             <HashLink className='link link-nav' to='/home#aboutme'>About Me</HashLink>
                             <HashLink className='link link-nav' to='/home#projects'>Projects</HashLink>
+                            <HashLink className='link link-nav' to='/home#contact'>Contact</HashLink>
                             <HashLink className='link link-nav' to='/home#home'>Resume</HashLink>
                         </Grid>
                         <IconButton

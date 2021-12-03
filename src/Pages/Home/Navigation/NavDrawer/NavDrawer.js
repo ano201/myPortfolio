@@ -27,10 +27,11 @@ const NavDrawer = ({ toggleDrawer, state }) => {
                 open={state['right']}
                 onClose={toggleDrawer('right', false)}
             >
-
+                <HashLink className='link link-nav-drawer' style={{ fontSize: '3rem', color: '#A3E4D7' }} to='/home#home'>Murad</HashLink>
                 <HashLink className='link link-nav-drawer' to='/home#home'>Home</HashLink>
                 <HashLink className='link link-nav-drawer' to='/home#aboutme'>About Me</HashLink>
                 <HashLink className='link link-nav-drawer' to='/home#projects'>Projects</HashLink>
+                <HashLink className='link link-nav-drawer' to='/home#contact'>Contact</HashLink>
                 <HashLink className='link link-nav-drawer' to='/home#home'>Resume</HashLink>
             </Drawer>
         </div>
