@@ -17,7 +17,7 @@ import classNames from 'classnames';
 
 const Navigation = () => {
 
-    const [open, setOpen] = useState(false);
+    const [opened, setOpened] = useState(false);
     const [state, setState] = useState({
         right: false
     });
@@ -28,7 +28,7 @@ const Navigation = () => {
         }
 
         setState({ ...state, [anchor]: open });
-        setOpen(true);
+        setOpened(!opened);
     };
 
     return (
@@ -66,13 +66,13 @@ const Navigation = () => {
                             sx={{ mr: 2, display: { md: 'none' } }}
                             onClick={toggleDrawer('right', true)}
                         >
-                            <MenuIcon />
-                            <CloseIcon className={classNames({'open': open})} />
+                            <MenuIcon className={classNames({'closed': opened})} />
+                            <CloseIcon className={classNames('close-icon', {'closed': !opened})} />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
             </Box>
-            <NavDrawer toggleDrawer={toggleDrawer} state={state} osetOpen={setOpen} ></NavDrawer>
+            <NavDrawer toggleDrawer={toggleDrawer} state={state} ></NavDrawer>
         </div>
     );
 };

@@ -60,9 +60,14 @@
 img {
   width: 100%;
 }
-.open{
-    display: none;
+.closed{
+    display: none !important;
 }
-.close{
-    display: block;
+
+.close-icon{
+    animation: 1s transformation;
+}
+@keyframes transformation {
+    0%,100%{transform: rotate(0deg)}
+    50%{transform: rotate(90deg)}
 }
