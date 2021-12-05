@@ -54,7 +54,7 @@ const Navigation = () => {
                         <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
                             <HashLink className='link link-nav' to='/home#home'>Home</HashLink>
                             <HashLink className='link link-nav' to='/home#aboutme'>About Me</HashLink>
-                            <HashLink className='link link-nav' to='/home#projects'>Projects</HashLink>
+                            <HashLink className='link link-nav' to='/allProjects#allProjects'>Projects</HashLink>
                             <HashLink className='link link-nav' to='/home#contact'>Contact</HashLink>
                             <HashLink className='link link-nav' to='/home#home'>Resume</HashLink>
                         </Grid>

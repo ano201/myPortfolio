@@ -29,7 +29,7 @@ const ContactForm = () => {
                 variant="h3"
                 component="div"
                 sx={{ flexGrow: 1, textAlign: { xs: 'center', sm: 'center', md: 'left' } }}
-                className='light-text'
+                className='neon-text'
             >
                 Contact
             </Typography>
