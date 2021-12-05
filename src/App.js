@@ -5,9 +5,9 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
-import AllProjects from './Pages/AllProjects/AllProjects';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 import Footer from './Pages/Shared/Footer/Footer';
+import AllProjects from './Pages/AllProjects/AllProjects/AllProjects';
 
 
 function App() {
