@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Skills = () => {
 
     let { path, url } = useRouteMatch();
+    console.log(path);
 
     return (
         <Box id='skills' sx={{ flexGrow: 1, mt: '10rem' }}>
