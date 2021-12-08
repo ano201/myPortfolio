@@ -35,7 +35,7 @@ const Footer = () => {
                         </a>
                     </Grid>
                     <Grid >
-                        <a className="link" target='blank' href=''>
+                        <a className="link" target='blank' href='https://www.linkedin.com/in/murad-hossain-723242215'>
                             <img src={linkedIn} alt='' />
                         </a>
                     </Grid>
@@ -45,13 +45,13 @@ const Footer = () => {
                         </a>
                     </Grid>
                     <Grid >
-                        <a className="link" target='blank' href=''>
+                        <a className="link" target='blank' href='https://github.com/ano201'>
                             <img src={github} alt='' />
                         </a>
                     </Grid>
                 </Grid>
                 <a className="link" target='blank' href='mailto:ahmu689@gmail.com'>
-                    <Typography className='dark-text' variant="h6" display="block" sx={{ textAlign: 'center', mt: '3mm' }}>
+                    <Typography className='neon-text' variant="h6" display="block" sx={{ textAlign: 'center', mt: '3mm' }}>
                         ahmu689@gmail.com
                     </Typography>
                 </a>
