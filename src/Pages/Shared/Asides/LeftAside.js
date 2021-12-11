@@ -4,15 +4,15 @@ import { Grid, Typography } from '@mui/material';
 
 const LeftAside = () => {
 
-	const mailAddress = 'ahmu689@gmail.com';
+	const mailAddress = 'AHMU689@GMAIL.COM';
 	const stringArray = mailAddress.split("");
 
     return (
         <Box sx={{  }} >
-            <Grid sx={{ width: '5rem', height: '70vh', display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex' }, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', position: 'fixed', border: 2 }} >
+            <Grid sx={{ width: '2rem', height: '70vh', display: { xs: 'none', sm: 'none', md: 'none', lg: 'inline-flex', xl: 'inline-flex' }, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', position: 'fixed', border: 2 }} >
 				<Grid>
 				<a className="link" target='blank' href='mailto:ahmu689@gmail.com'>
-               {stringArray.map(letter => <Typography className='neon-text' variant="h6" display="block" sx={{ textAlign: 'center' }}>
+               {stringArray.map(letter => <Typography className='neon-text' variant="h6" sx={{ textAlign: 'center', mt: '-1rem' }}>
                     {letter}
                 </Typography>)}
             </a>
