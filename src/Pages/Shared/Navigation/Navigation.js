@@ -36,7 +36,7 @@ const Navigation = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar style={{ background: '#0a192f8e' }} position="fixed">
                     <Toolbar>
-                        <Grid sx={{ width: 1 / 6 }}>
+                        <Grid sx={{ width: { xs: 1/6, sm: 1/6, md: 1/6, lg: 1/8, xl: 1/12 } }}>
                             <HashLink className='link' to='/home#home'>
                                 <img style={{ width: '100%' }} src={logo} alt="" />
                             </HashLink>
