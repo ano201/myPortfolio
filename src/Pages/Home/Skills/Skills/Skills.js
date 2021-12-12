@@ -12,7 +12,7 @@ const Skills = () => {
                 sx={{ flexGrow: 1, textAlign: { xs: 'center', sm: 'center', md: 'left' }, my: { xs: '2rem', sm: '2rem' } }}
                 className='neon-text'
             >
-                Skills
+                My Skills
             </Typography>
             <Grid>
                 <Sections></Sections>
