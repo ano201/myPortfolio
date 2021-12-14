@@ -9,7 +9,6 @@ const Expert = () => {
         component="div"
         sx={{
           flexGrow: 1,
-          textAlign: { xs: "center", sm: "center", md: "left" },
           my: "1rem",
         }}
         className="dark-text"

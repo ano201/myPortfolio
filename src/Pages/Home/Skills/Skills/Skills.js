@@ -23,8 +23,8 @@ const Skills = () => {
         sx={{
           m: "auto",
           width: { sm: 1, xs: 1, md: 1 / 1.2, lg: 1 / 1.2, xl: 1 / 1.2 },
-          borderBottom: "1px dashed #11786348",
-          borderTop: "1px dashed #11786348",
+          borderBottom: "1px dashed #4df1aa57",
+          borderTop: "1px dashed #4df1aa57",
         }}
       >
         <Expert></Expert>
@@ -33,7 +33,7 @@ const Skills = () => {
         sx={{
           m: "auto",
           width: { sm: 1, xs: 1, md: 1 / 1.2, lg: 1 / 1.2, xl: 1 / 1.2 },
-          borderBottom: "1px dashed #11786348",
+          borderBottom: "1px dashed #4df1aa57",
         }}
       >
         <Comfortable></Comfortable>
@@ -42,7 +42,7 @@ const Skills = () => {
         sx={{
           m: "auto",
           width: { sm: 1, xs: 1, md: 1 / 1.2, lg: 1 / 1.2, xl: 1 / 1.2 },
-          borderBottom: "1px dashed #11786348",
+          borderBottom: "1px dashed #4df1aa57",
         }}
       >
         <Familiar></Familiar>
