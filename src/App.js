@@ -9,6 +9,7 @@ import AllProjects from "./Pages/AllProjects/AllProjects/AllProjects";
 import Login from "./Pages/Login/Login";
 import Management from "./Pages/Management/Management";
 import AuthProvider from "./Context/AuthProvider";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -22,12 +23,12 @@ function App() {
             <Route path="/allProjects">
               <AllProjects />
             </Route>
-            <Route path="/login">
+            <Route path="/admin">
               <Login />
             </Route>
-            <Route path="/management">
+            <PrivateRoute path="/management">
               <Management />
-            </Route>
+            </PrivateRoute>
             <Route path={["/", "/home"]}>
               <Home />
             </Route>

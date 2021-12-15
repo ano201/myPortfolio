@@ -7,7 +7,10 @@ import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -24,6 +27,27 @@ const useStyles = makeStyles({
 const Login = () => {
   const classes = useStyles();
 
+  const { user, userLogin, error, loading } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+
+  const [loginData, setLoginData] = useState({});
+
+  const handleonBlur = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    userLogin(loginData.email, loginData.password, location, history);
+    console.log(error);
+  };
+
   return (
     <Box sx={{ flexGrow: 1, mt: "10rem" }}>
       <Container>
@@ -38,40 +62,43 @@ const Login = () => {
         >
           Admin Login
         </Typography>
-        <Paper
-          elevation={12}
-          sx={{
-            backgroundColor: "inherit",
-            p: 2,
-            m: "auto",
-            width: { md: "80%" },
-          }}
-        >
-          <TextField
-            label="Name"
-            className={classes.root}
-            InputProps={{ style: { color: "#4df1aa" } }}
-            InputLabelProps={{ style: { color: "#4df1aa" } }}
-            variant="outlined"
-          />
-          <TextField
-            label="Email"
-            className={classes.root}
-            InputProps={{ style: { color: "#4df1aa" } }}
-            InputLabelProps={{ style: { color: "#4df1aa" } }}
-            variant="outlined"
-          />
-          <TextField
-            label="Message"
-            className={classes.root}
-            InputProps={{ style: { color: "#4df1aa" } }}
-            InputLabelProps={{ style: { color: "#4df1aa" } }}
-            variant="outlined"
-          />
-          <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
-            <button className="hovered-btn">Login</button>
-          </Grid>
-        </Paper>
+        <form onSubmit={handleSubmit}>
+          <Paper
+            elevation={12}
+            sx={{
+              backgroundColor: "inherit",
+              p: 2,
+              m: "auto",
+              width: { md: "80%" },
+            }}
+          >
+            <TextField
+              label="Email"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="email"
+              type="email"
+            />
+            <TextField
+              label="Password"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="password"
+              type="password"
+            />
+            <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
+              <button type="submit" className="hovered-btn">
+                Login
+              </button>
+            </Grid>
+          </Paper>
+        </form>
       </Container>
     </Box>
   );

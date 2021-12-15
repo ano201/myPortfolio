@@ -1,5 +1,4 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
 
@@ -7,7 +6,7 @@ const PrivateRoute = ({ children, ...rest }) => {
 
     const { user, loading } = useAuth();
     if (loading) {
-        return <div className='text-center'><Spinner animation="grow" variant="info" /></div>
+        return <div className='text-center'></div>
     }
 
     return (
@@ -20,7 +19,7 @@ const PrivateRoute = ({ children, ...rest }) => {
                     ) : (
                         <Redirect
                             to={{
-                                pathname: "/login",
+                                pathname: "/admin",
                                 state: { from: location }
                             }}
                         />
