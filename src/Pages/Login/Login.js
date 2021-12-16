@@ -1,5 +1,7 @@
 import {
+  Alert,
   Box,
+  CircularProgress,
   Container,
   Grid,
   Paper,
@@ -80,6 +82,7 @@ const Login = () => {
               onBlur={handleonBlur}
               name="email"
               type="email"
+              required
             />
             <TextField
               label="Password"
@@ -90,14 +93,25 @@ const Login = () => {
               onBlur={handleonBlur}
               name="password"
               type="password"
+              required
             />
             <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
               <button type="submit" className="hovered-btn">
                 Login
               </button>
+              {error && (
+                <Grid sx={{ textAlign: "center", mt: 2 }}>
+                  <Alert severity="error">{error}</Alert>
+                </Grid>
+              )}
             </Grid>
           </Paper>
         </form>
+        {loading && (
+          <Grid sx={{ textAlign: "center" }}>
+            <CircularProgress color="secondary" />
+          </Grid>
+        )}
       </Container>
     </Box>
   );
