@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import useAuth from "../../Hooks/useAuth";
 
 const useStyles = makeStyles({
   root: {
@@ -24,6 +25,7 @@ const useStyles = makeStyles({
 
 const Management = () => {
   const classes = useStyles();
+  const { logOut, loading, error } = useAuth();
   return (
     <Box sx={{ flexGrow: 1, mt: "10rem" }}>
       <Container>
@@ -81,6 +83,11 @@ const Management = () => {
             <button className="hovered-btn">Update</button>
           </Grid>
         </Paper>
+		<Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
+              <button onClick={logOut} className="hovered-btn">
+                Logout
+              </button>
+            </Grid>
       </Container>
     </Box>
   );

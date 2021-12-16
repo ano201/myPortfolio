@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 const Login = () => {
   const classes = useStyles();
 
-  const { user, userLogin, error, loading } = useAuth();
+  const { userLogin, error, loading } = useAuth();
 
   const location = useLocation();
   const history = useHistory();
@@ -45,7 +45,6 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     userLogin(loginData.email, loginData.password, location, history);
-    console.log(error);
   };
 
   return (
