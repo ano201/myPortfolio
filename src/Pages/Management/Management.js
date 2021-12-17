@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FileBase64 from "react-file-base64";
 import {
   Box,
   Container,
@@ -24,12 +25,12 @@ const useStyles = makeStyles({
 });
 
 const Management = () => {
-   const {logOut} = useAuth();
+  const { logOut } = useAuth();
   const classes = useStyles();
 
-const [projectData, setProjectData] = useState({});
+  const [projectData, setProjectData] = useState({});
 
-const handleonBlur = (e) => {
+  const handleonBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
     const newProjectData = { ...projectData };
@@ -56,7 +57,7 @@ const handleonBlur = (e) => {
         >
           Management
         </Typography>
-         <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <Paper
             elevation={12}
             sx={{
@@ -66,17 +67,17 @@ const handleonBlur = (e) => {
               width: { md: "80%" },
             }}
           >
-<Typography
-          variant="h4"
-          component="div"
-          sx={{
-            textAlign: { xs: "center", sm: "center", md: "left" },
-            mt: "2rem",
-          }}
-          className="neon-text"
-        >
-          Add new project
-        </Typography>
+            <Typography
+              variant="h4"
+              component="div"
+              sx={{
+                textAlign: { xs: "center", sm: "center", md: "left" },
+                mt: "2rem",
+              }}
+              className="neon-text"
+            >
+              Add new project
+            </Typography>
             <TextField
               label="Project's Title"
               className={classes.root}
@@ -97,17 +98,7 @@ const handleonBlur = (e) => {
               name="details"
               required
             />
-
-            <TextField
-              className={classes.root}
-              InputProps={{ style: { color: "#4df1aa" } }}
-              InputLabelProps={{ style: { color: "#4df1aa" } }}
-              variant="outlined"
-              onBlur={handleonBlur}
-              name="image"
-			  type="file"
-              required
-            />
+            <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
             <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
               <button type="submit" className="hovered-btn">
                 Add Project
@@ -115,11 +106,11 @@ const handleonBlur = (e) => {
             </Grid>
           </Paper>
         </form>
-		<Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
-              <button onClick={logOut} className="hovered-btn">
-                Logout
-              </button>
-            </Grid>
+        <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
+          <button onClick={logOut} className="hovered-btn">
+            Logout
+          </button>
+        </Grid>
       </Container>
     </Box>
   );
