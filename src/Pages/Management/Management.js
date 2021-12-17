@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
@@ -24,8 +24,24 @@ const useStyles = makeStyles({
 });
 
 const Management = () => {
+   const {logOut} = useAuth();
   const classes = useStyles();
-  const { logOut, loading, error } = useAuth();
+
+const [projectData, setProjectData] = useState({});
+
+const handleonBlur = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newProjectData = { ...projectData };
+    newProjectData[field] = value;
+    setProjectData(newProjectData);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(projectData);
+  };
+
   return (
     <Box sx={{ flexGrow: 1, mt: "10rem" }}>
       <Container>
@@ -40,49 +56,65 @@ const Management = () => {
         >
           Management
         </Typography>
-        <Paper
-          elevation={12}
-          sx={{
-            backgroundColor: "inherit",
-            p: 2,
-            m: "auto",
-            width: { md: "80%" },
-          }}
-        >
-          <Typography
-            variant="h5"
-            component="div"
-            sx={{ flexGrow: 1, mt: 2 }}
-            className="light-text"
-            align="center"
+         <form onSubmit={handleSubmit}>
+          <Paper
+            elevation={12}
+            sx={{
+              backgroundColor: "inherit",
+              p: 2,
+              m: "auto",
+              width: { md: "80%" },
+            }}
           >
-            Manage
-          </Typography>
-          <TextField
-            label="Name"
-            className={classes.root}
-            InputProps={{ style: { color: "#4df1aa" } }}
-            InputLabelProps={{ style: { color: "#4df1aa" } }}
-            variant="outlined"
-          />
-          <TextField
-            label="Email"
-            className={classes.root}
-            InputProps={{ style: { color: "#4df1aa" } }}
-            InputLabelProps={{ style: { color: "#4df1aa" } }}
-            variant="outlined"
-          />
-          <TextField
-            label="Message"
-            className={classes.root}
-            InputProps={{ style: { color: "#4df1aa" } }}
-            InputLabelProps={{ style: { color: "#4df1aa" } }}
-            variant="outlined"
-          />
-          <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
-            <button className="hovered-btn">Update</button>
-          </Grid>
-        </Paper>
+<Typography
+          variant="h4"
+          component="div"
+          sx={{
+            textAlign: { xs: "center", sm: "center", md: "left" },
+            mt: "2rem",
+          }}
+          className="neon-text"
+        >
+          Add new project
+        </Typography>
+            <TextField
+              label="Project's Title"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="title"
+              required
+            />
+            <TextField
+              label="Description"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="details"
+              required
+            />
+
+            <TextField
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="image"
+			  type="file"
+              required
+            />
+            <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
+              <button type="submit" className="hovered-btn">
+                Add Project
+              </button>
+            </Grid>
+          </Paper>
+        </form>
 		<Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
               <button onClick={logOut} className="hovered-btn">
                 Logout
