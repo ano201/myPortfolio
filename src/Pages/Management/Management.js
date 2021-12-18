@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FileBase64 from "react-file-base64";
+// import FileBase64 from "react-file-base64";
 import {
   Box,
   Container,
@@ -98,7 +98,18 @@ const Management = () => {
               name="details"
               required
             />
-            <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
+
+            <TextField
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="image"
+              type='file'
+              required
+            />
+
             <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
               <button type="submit" className="hovered-btn">
                 Add Project
