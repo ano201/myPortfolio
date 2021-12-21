@@ -37,7 +37,7 @@ const ContactForm = () => {
         Contact
       </Typography>
       <Paper
-        elevation={12}
+        elevation={24}
         sx={{
           backgroundColor: "inherit",
           p: 2,

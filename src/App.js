@@ -7,9 +7,9 @@ import LeftAside from "./Pages/Shared/Asides/LeftAside";
 import RightAside from "./Pages/Shared/Asides/RightAside";
 import AllProjects from "./Pages/AllProjects/AllProjects/AllProjects";
 import Login from "./Pages/Login/Login";
-import Management from "./Pages/Management/Management";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import Management from "./Pages/Management/Management/Management";
 
 function App() {
   return (
