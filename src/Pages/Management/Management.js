@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FileBase64 from "react-file-base64";
 import {
   Box,
   Container,
@@ -29,6 +28,7 @@ const Management = () => {
   const classes = useStyles();
 
   const [projectData, setProjectData] = useState({});
+  const [file, setFile] = useState(null);
 
   const handleonBlur = (e) => {
     const field = e.target.name;
@@ -38,10 +38,30 @@ const Management = () => {
     setProjectData(newProjectData);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(projectData);
+  const handleFileChange = (e) => {
+     const newFile = e.target.files[0];
+	 setFile(newFile);
   };
+
+  const handleSubmit = (e) => {
+	e.preventDefault();
+	const formData = new FormData();
+	formData.append("name", projectData.name);
+	formData.append("details", projectData.details);
+	formData.append("file", file);
+	
+	fetch("http://localhost:5000/projects", {
+		method: "POST",
+	body: formData
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data);
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	};
 
   return (
     <Box sx={{ flexGrow: 1, mt: "10rem" }}>
@@ -95,10 +115,20 @@ const Management = () => {
               InputLabelProps={{ style: { color: "#4df1aa" } }}
               variant="outlined"
               onBlur={handleonBlur}
-              name="details"
+			  name="details"
               required
             />
-            <FileBase64 multiple={false} onDone={this.getFiles.bind(this)} />
+
+		    <TextField
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onChange={handleFileChange}
+              type="file"
+              required
+            />
+            
             <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
               <button type="submit" className="hovered-btn">
                 Add Project
