@@ -49,12 +49,14 @@ const AddProject = () => {
     formData.append("adminWork", projectData.adminWork);
     formData.append("authentication", projectData.authentication);
     formData.append("routing", projectData.routing);
-    formData.append("madeBy", projectData.madeBy);
+    formData.append("about", projectData.about);
     formData.append("responsive", projectData.responsive);
     formData.append("database", projectData.database);
     formData.append("hostingDatabase", projectData.hostingDatabase);
-    formData.append("page", projectData.page);
     formData.append("payment", projectData.payment);
+    formData.append("live", projectData.live);
+    formData.append("sourceCode", projectData.sourceCode);
+    formData.append("serverCode", projectData.serverCode);
     formData.append("file", file);
 
     fetch("http://localhost:5000/projects", {
@@ -145,6 +147,16 @@ const AddProject = () => {
               required
             />
             <TextField
+              label="About"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="about"
+              required
+            />
+            <TextField
               label="Responsive with"
               className={classes.root}
               InputProps={{ style: { color: "#4df1aa" } }}
@@ -175,16 +187,6 @@ const AddProject = () => {
               required
             />
             <TextField
-              label="Page"
-              className={classes.root}
-              InputProps={{ style: { color: "#4df1aa" } }}
-              InputLabelProps={{ style: { color: "#4df1aa" } }}
-              variant="outlined"
-              onBlur={handleonBlur}
-              name="page"
-              required
-            />
-            <TextField
               label="Payment (Optional)"
               className={classes.root}
               InputProps={{ style: { color: "#4df1aa" } }}
@@ -192,6 +194,36 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="payment"
+            />
+            <TextField
+              label="Live Link"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="live"
+              required
+            />
+            <TextField
+              label="Source Code"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="sourceCode"
+              required
+            />
+            <TextField
+              label="Server Code"
+              className={classes.root}
+              InputProps={{ style: { color: "#4df1aa" } }}
+              InputLabelProps={{ style: { color: "#4df1aa" } }}
+              variant="outlined"
+              onBlur={handleonBlur}
+              name="serverCode"
+              required
             />
 
             <TextField
