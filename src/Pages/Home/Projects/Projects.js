@@ -4,14 +4,14 @@ import { Box, Grid, Typography } from "@mui/material";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/projects")
+    fetch("https://infinite-ridge-52082.herokuapp.com/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
       });
   }, []);
   return (
-    <Box sx={{ flexGrow: 1, mt: "10rem" }}>
+    <Box id="projects" sx={{ flexGrow: 1, mt: "10rem" }}>
       <Typography
         variant="h3"
         component="div"
