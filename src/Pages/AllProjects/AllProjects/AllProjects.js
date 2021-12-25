@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from "@mui/material";
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("https://infinite-ridge-52082.herokuapp.com/projects")
+    fetch("http://localhost:5000/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);

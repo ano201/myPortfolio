@@ -8,10 +8,10 @@ const AboutMe = () => {
     return (
         <Box sx={{ flexGrow: 1, mt: '10rem' }} id='aboutme'>
             <Grid container>
-                <Grid md={6} sm={12} sx={{ mt: { md: '10rem', lg: '5rem'} }}>
-                    <img src={aboutMe} alt="" />
+                <Grid item md={6} sm={12} sx={{ mt: { md: '10rem', lg: '5rem'} }}>
+                    <img item src={aboutMe} alt="" />
                 </Grid>
-                <Grid md={6} sm={12}>
+                <Grid item md={6} sm={12}>
                     <Typography
                         variant="h3"
                         component="div"

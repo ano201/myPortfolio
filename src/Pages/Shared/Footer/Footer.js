@@ -12,18 +12,18 @@ const Footer = () => {
     <Box>
       <Container sx={{ flexGrow: 1, mt: "10rem", mb: "5rem" }}>
         <Grid container>
-          <Grid xs={12} sm={12} md={8} lg={6} xl={6} sx={{ m: "auto" }}>
+          <Grid item xs={12} sm={12} md={8} lg={6} xl={6} sx={{ m: "auto" }}>
             <Grid sx={{ m: "auto" }}>
               <img src={footerMe} alt="" />
             </Grid>
           </Grid>
-          <Grid xs={12} sm={12} md={6} lg={6} xl={6} sx={{ m: "auto" }}>
+          <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ m: "auto" }}>
             <Typography
               variant="subtitle2"
               component="div"
               sx={{
                 flexGrow: 1,
-                textAlign: 'center',
+                textAlign: "center",
                 my: { xs: "2rem", sm: "2rem" },
               }}
               className="neon-text"
@@ -51,7 +51,7 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              target="blank"
+              target="_blank"
               href="https://www.facebook.com/murad.hossain201"
             >
               <img src={facebook} alt="" />
@@ -60,7 +60,7 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              target="blank"
+              target="_blank"
               href="https://www.linkedin.com/in/murad-hossain-723242215"
             >
               <img src={linkedIn} alt="" />
@@ -69,24 +69,33 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              target="blank"
+              target="_blank"
               href="https://twitter.com/Muradmt201"
             >
               <img src={twitter} alt="" />
             </a>
           </Grid>
           <Grid>
-            <a className="link" target="blank" href="https://github.com/ano201">
+            <a className="link" target="_blank" href="https://github.com/ano201">
               <img src={github} alt="" />
             </a>
           </Grid>
         </Grid>
-        <a className="link" target="blank" href="mailto:ahmu689@gmail.com">
+        <a className="link" target="_blank" href="mailto:ahmu689@gmail.com">
           <Typography
             className="neon-text"
             variant="h6"
-            display="block"
-            sx={{ textAlign: "center", mt: "3mm" }}
+            sx={{
+              textAlign: "center",
+              mt: "3mm",
+              display: {
+                sm: "block",
+                xs: "block",
+                md: "block",
+                lg: "none",
+                xl: "none",
+              },
+            }}
           >
             ahmu689@gmail.com
           </Typography>
