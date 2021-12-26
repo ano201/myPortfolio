@@ -10,6 +10,7 @@ import Login from "./Pages/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Management from "./Pages/Management/Management/Management";
+import Deletion from "./Pages/Management/Deletion/Deletion";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <PrivateRoute path="/management">
               <Management />
+            </PrivateRoute>
+            <PrivateRoute path="/deletion">
+              <Deletion />
             </PrivateRoute>
             <Route path={["/", "/home"]}>
               <Home />

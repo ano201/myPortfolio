@@ -4,6 +4,7 @@ import {
   Box,
   Container,
   Grid,
+  LinearProgress,
   Paper,
   TextField,
   Typography,
@@ -26,6 +27,7 @@ const useStyles = makeStyles({
 const AddProject = () => {
   const classes = useStyles();
   const [success, setSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const [projectData, setProjectData] = useState([]);
   const [file, setFile] = useState(null);
@@ -45,6 +47,8 @@ const AddProject = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitting(true);
+    setSuccess(false);
     const formData = new FormData();
     formData.append("name", projectData.name);
     formData.append("userWork", projectData.userWork);
@@ -69,6 +73,7 @@ const AddProject = () => {
       .then((data) => {
         e.target.reset();
         setSuccess(true);
+        setSubmitting(false);
       })
       .catch((error) => {
         console.error(error);
@@ -244,9 +249,16 @@ const AddProject = () => {
                 Add Project
               </button>
               {success && (
-                <Alert sx={{ mt: 2 }} variant="outlined" severity="success">
-                  This is an info alert — check it out!
+                <Alert
+                  sx={{ mt: 2, color: "#4df1aa" }}
+                  variant="outlined"
+                  severity="info"
+                >
+                  Project Successfully Added!!!!!!!!!!!
                 </Alert>
+              )}
+              {submitting && (
+                <LinearProgress sx={{ mt: 2 }} color="secondary" />
               )}
             </Grid>
           </Paper>
