@@ -27,7 +27,7 @@ const LeftAside = () => {
         }}
       >
         <Grid>
-          <a className="link" target="_blank" href="mailto:ahmu689@gmail.com">
+          <a className="link" rel="noreferrer" target="_blank" href="mailto:ahmu689@gmail.com">
             {stringArray.map((letter) => (
               <Typography
                 className="neon-text"

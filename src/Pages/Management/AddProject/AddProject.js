@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Alert,
   Box,
   Container,
   Grid,
@@ -24,6 +25,7 @@ const useStyles = makeStyles({
 
 const AddProject = () => {
   const classes = useStyles();
+  const [success, setSuccess] = useState(false);
 
   const [projectData, setProjectData] = useState([]);
   const [file, setFile] = useState(null);
@@ -65,7 +67,8 @@ const AddProject = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        e.target.reset();
+        setSuccess(true);
       })
       .catch((error) => {
         console.error(error);
@@ -240,6 +243,11 @@ const AddProject = () => {
               <button type="submit" className="hovered-btn">
                 Add Project
               </button>
+              {success && (
+                <Alert sx={{ mt: 2 }} variant="outlined" severity="success">
+                  This is an info alert — check it out!
+                </Alert>
+              )}
             </Grid>
           </Paper>
         </form>

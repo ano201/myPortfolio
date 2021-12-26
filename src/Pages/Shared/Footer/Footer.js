@@ -51,7 +51,7 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              target="_blank"
+              rel="noreferrer" target="_blank"
               href="https://www.facebook.com/murad.hossain201"
             >
               <img src={facebook} alt="" />
@@ -60,7 +60,7 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              target="_blank"
+              rel="noreferrer" target="_blank"
               href="https://www.linkedin.com/in/murad-hossain-723242215"
             >
               <img src={linkedIn} alt="" />
@@ -69,19 +69,19 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              target="_blank"
+              rel="noreferrer" target="_blank"
               href="https://twitter.com/Muradmt201"
             >
               <img src={twitter} alt="" />
             </a>
           </Grid>
           <Grid>
-            <a className="link" target="_blank" href="https://github.com/ano201">
+            <a className="link" rel="noreferrer" target="_blank" href="https://github.com/ano201">
               <img src={github} alt="" />
             </a>
           </Grid>
         </Grid>
-        <a className="link" target="_blank" href="mailto:ahmu689@gmail.com">
+        <a className="link" rel="noreferrer" target="_blank" href="mailto:ahmu689@gmail.com">
           <Typography
             className="neon-text"
             variant="h6"

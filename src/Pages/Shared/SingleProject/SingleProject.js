@@ -1,6 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const SingleProject = (props) => {
   const {
@@ -19,11 +18,12 @@ const SingleProject = (props) => {
     serverCode,
   } = props.project.data;
   const image = props.project.image;
+  const style = { marginTop: "1rem" };
   return (
     <Box sx={{ flexGrow: 1, mt: "5rem", boxShadow: 3 }}>
       <Grid container sx={{ display: "flex", alignItems: "center" }}>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-          <a target="_blank" className="link" href={live}>
+          <a rel="noreferrer" target="_blank" className="link" href={live}>
             <img src={`data:image/png;base64,${image.img} `} alt="" />
           </a>
         </Grid>
@@ -70,15 +70,22 @@ const SingleProject = (props) => {
             display: "flex",
             justifyContent: "space-evenly",
             width: 1,
+            flexWrap: {
+              xs: "wrap",
+              sm: "wrap",
+              md: "nowrap",
+              lg: "nowrap",
+              xl: "nowrap",
+            },
           }}
         >
-          <a target="_blank" href={live}>
+          <a rel="noreferrer" style={style} target="_blank" href={live}>
             <button className="hovered-btn">See Live</button>
           </a>
-          <a target="_blank" href={sourceCode}>
+          <a rel="noreferrer" style={style} target="_blank" href={sourceCode}>
             <button className="hovered-btn">Source Code</button>
           </a>
-          <a target="_blank" href={serverCode}>
+          <a rel="noreferrer" style={style} target="_blank" href={serverCode}>
             <button className="hovered-btn">Server Code</button>
           </a>
         </Grid>

@@ -9,7 +9,7 @@ const AboutMe = () => {
         <Box sx={{ flexGrow: 1, mt: '10rem' }} id='aboutme'>
             <Grid container>
                 <Grid item md={6} sm={12} sx={{ mt: { md: '10rem', lg: '5rem'} }}>
-                    <img item src={aboutMe} alt="" />
+                    <img src={aboutMe} alt="" />
                 </Grid>
                 <Grid item md={6} sm={12}>
                     <Typography
