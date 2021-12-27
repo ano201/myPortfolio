@@ -7,7 +7,7 @@ import github from "../../../images/Social/Github.svg";
 
 const RightAside = () => {
   return (
-    <Box sx={{ position: "absolute", right: "5rem" }}>
+    <Box sx={{ position: "absolute", right: "5rem", mt: 7 }}>
       <Grid
         sx={{
           width: "5rem",

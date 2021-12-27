@@ -36,7 +36,7 @@ const Expert = () => {
           }}
           className="neon-text"
         >
-          HTML5 • CSS3 • JavaScritp • ES6 • Bootstrap • React JS • Material-UI •
+          HTML5 • CSS3 • JavaScript • ES6 • Bootstrap • React JS • Material-UI •
           Tailwind-CSS
         </Typography>
       </Grid>

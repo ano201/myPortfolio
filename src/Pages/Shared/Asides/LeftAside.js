@@ -8,7 +8,7 @@ const LeftAside = () => {
   let x = 1;
 
   return (
-    <Box sx={{}}>
+    <Box sx={{ position: "absolute", mt: 23 }}>
       <Grid
         sx={{
           width: "2rem",
@@ -27,7 +27,12 @@ const LeftAside = () => {
         }}
       >
         <Grid>
-          <a className="link" rel="noreferrer" target="_blank" href="mailto:ahmu689@gmail.com">
+          <a
+            className="link"
+            rel="noreferrer"
+            target="_blank"
+            href="mailto:ahmu689@gmail.com"
+          >
             {stringArray.map((letter) => (
               <Typography
                 className="neon-text"
