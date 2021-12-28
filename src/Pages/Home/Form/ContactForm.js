@@ -5,6 +5,17 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import { makeStyles } from "@mui/styles";
 import { Grid, Typography } from "@mui/material";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Slide from "@mui/material/Slide";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +36,7 @@ const ContactForm = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
 
     emailjs
       .sendForm(
@@ -35,12 +47,32 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          handleClickOpen();
+          e.target.reset();
+          setMessage(
+            "Your email has been sent successfully. Thank you so much."
+          );
         },
         (error) => {
-          console.log(error.text);
+          handleClickOpen();
+          setMessage(
+            "Your email can not be sent at this moment. Please try again. Thank you."
+          );
         }
       );
+  };
+
+  const [open, setOpen] = React.useState(false);
+  const [sending, setSending] = React.useState(false);
+  const [message, setMessage] = React.useState("");
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSending(false);
   };
 
   return (
@@ -118,12 +150,36 @@ const ContactForm = () => {
             required
           />
           <Grid sx={{ fontWeight: "bold", mt: 4, textAlign: "center" }}>
-            <button type="submit" className="hovered-btn">
+            <Button disabled={sending} type="submit" className="hovered-btn">
               Let's Talk
-            </button>
+            </Button>
           </Grid>
         </form>
       </Paper>
+      <div>
+        <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleClose}
+          aria-describedby="alert-dialog-slide-description"
+        >
+          <DialogTitle sx={{ backgroundColor: "#0a192f", color: "#4df1aa" }}>
+            {"Mail Status"}
+          </DialogTitle>
+          <DialogContent sx={{ backgroundColor: "#0a192f" }}>
+            <DialogContentText
+              sx={{ color: "#4df1aa" }}
+              id="alert-dialog-slide-description"
+            >
+              {message}
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions sx={{ backgroundColor: "#0a192f" }}>
+            <Button onClick={handleClose}>Okay</Button>
+          </DialogActions>
+        </Dialog>
+      </div>
     </Box>
   );
 };

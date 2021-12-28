@@ -15,23 +15,23 @@
 }
 
 .hovered-btn {
-  width: 200px;
-  height: 60px;
-  font-size: 25px;
-  border: 1px solid #4df1aa;
-  color: #A3E4D7;
-  background-color: #0a192f;
-  border-radius: 3px;
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 25px !important;
+border: 1px solid #4df1aa !important;
+  color: #A3E4D7 !important;
+  background-color: #0a192f !important;
+  border-radius: 3px !important;
   box-shadow: inset 0 0 0 0 #4df1aa;
   transition: ease-out 0.4s;
   outline: none;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .hovered-btn:hover {
   box-shadow: inset 200px 0 0 0 #4df1aa;
-  cursor: pointer;
-  color: #0a192f;
+  cursor: pointer !important;
+  color: #0a192f !important;
 }
 
 .link {
