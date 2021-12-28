@@ -65,7 +65,7 @@ const AddProject = () => {
     formData.append("serverCode", projectData.serverCode);
     formData.append("file", file);
 
-    fetch("https://infinite-ridge-52082.herokuapp.com/projects", {
+    fetch("http://localhost:5000/projects", {
       method: "POST",
       body: formData,
     })
