@@ -122,7 +122,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="userWork"
-              required
             />
             <TextField
               label="Admins Work"
@@ -132,7 +131,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="adminWork"
-              required
             />
             <TextField
               label="Authenticated By"
@@ -142,7 +140,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="authentication"
-              required
             />
             <TextField
               label="Routed by"
@@ -152,7 +149,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="routing"
-              required
             />
             <TextField
               label="About"
@@ -162,7 +158,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="about"
-              required
             />
             <TextField
               label="Responsive with"
@@ -172,7 +167,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="responsive"
-              required
             />
             <TextField
               label="Database"
@@ -182,7 +176,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="database"
-              required
             />
             <TextField
               label="Hosting Database"
@@ -192,7 +185,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="hostingDatabase"
-              required
             />
             <TextField
               label="Payment (Optional)"
