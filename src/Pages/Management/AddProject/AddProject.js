@@ -223,7 +223,6 @@ const AddProject = () => {
               variant="outlined"
               onBlur={handleonBlur}
               name="serverCode"
-              required
             />
 
             <TextField

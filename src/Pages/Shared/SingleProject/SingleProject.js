@@ -51,15 +51,15 @@ const SingleProject = (props) => {
               className="light-text"
             >
               <ul>
-                <li>{about}</li>
-                <li>{userWork}</li>
-                <li>{adminWork}</li>
-                {payment.length > 3 && <li>{payment}</li>}
-                <li>{authentication}</li>
-                <li>{routing}</li>
-                <li>{responsive}</li>
-                <li>{database}</li>
-                <li>{hostingDatabase}</li>
+                {about?.length > 3 && <li>{about}</li>}
+                {userWork?.length > 3 && <li>{userWork}</li>}
+                {adminWork?.length > 3 && <li>{adminWork}</li>}
+                {payment?.length > 3 && <li>{payment}</li>}
+                {authentication?.length > 3 && <li>{authentication}</li>}
+                {routing?.length > 3 && <li>{routing}</li>}
+                {responsive?.length > 3 && <li>{responsive}</li>}
+                {database?.length > 3 && <li>{database}</li>}
+                {hostingDatabase?.length > 3 && <li>{hostingDatabase}</li>}
               </ul>
             </Typography>
           </Grid>
@@ -85,9 +85,11 @@ const SingleProject = (props) => {
           <a rel="noreferrer" style={style} target="_blank" href={sourceCode}>
             <button className="hovered-btn">Source Code</button>
           </a>
-          <a rel="noreferrer" style={style} target="_blank" href={serverCode}>
-            <button className="hovered-btn">Server Code</button>
-          </a>
+          {serverCode?.length > 3 && (
+            <a rel="noreferrer" style={style} target="_blank" href={serverCode}>
+              <button className="hovered-btn">Server Code</button>
+            </a>
+          )}
         </Grid>
       </Grid>
     </Box>
