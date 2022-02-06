@@ -61,7 +61,7 @@ const Footer = () => {
             <a
               className="link"
               rel="noreferrer" target="_blank"
-              href="https://www.linkedin.com/in/murad-hossain-723242215"
+              href="https://www.linkedin.com/in/murad72342/"
             >
               <img src={linkedIn} alt="" />
             </a>
@@ -81,7 +81,7 @@ const Footer = () => {
             </a>
           </Grid>
         </Grid>
-        <a className="link" rel="noreferrer" target="_blank" href="mailto:ahmu689@gmail.com">
+        <a className="link" rel="noreferrer" target="_blank" href="mailto:muradhossain72342@gmail.com">
           <Typography
             className="neon-text"
             variant="h6"
@@ -97,7 +97,7 @@ const Footer = () => {
               },
             }}
           >
-            ahmu689@gmail.com
+            muradhossain72342@gmail.com
           </Typography>
         </a>
       </Container>

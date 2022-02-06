@@ -42,7 +42,7 @@ const RightAside = () => {
             className="link"
             rel="noreferrer"
             target="blank"
-            href="https://www.linkedin.com/in/murad-hossain-723242215"
+            href="https://www.linkedin.com/in/murad72342/"
           >
             <img src={linkedIn} alt="" />
           </a>
