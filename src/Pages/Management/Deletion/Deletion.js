@@ -5,7 +5,7 @@ import DeleteProject from "./DeleteProject/DeleteProject";
 const Deletion = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("https://http://localhost:5000/projects")
+    fetch("http://localhost:5000/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
@@ -15,7 +15,7 @@ const Deletion = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to Delete?");
     if (proceed) {
-      const url = `https://http://localhost:5000/projects/${id}`;
+      const url = `http://localhost:5000/projects/${id}`;
       fetch(url, {
         method: "DELETE",
       })

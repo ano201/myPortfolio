@@ -65,7 +65,7 @@ const AddProject = () => {
     formData.append("serverCode", projectData.serverCode);
     formData.append("file", file);
 
-    fetch("https://http://localhost:5000/projects", {
+    fetch("http://localhost:5000/projects", {
       method: "POST",
       body: formData,
     })

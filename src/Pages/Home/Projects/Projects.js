@@ -5,7 +5,7 @@ import SingleProject from "../../Shared/SingleProject/SingleProject";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("https://http://localhost:5000/projects")
+    fetch("http://localhost:5000/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
