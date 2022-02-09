@@ -79,7 +79,7 @@ const Navigation = () => {
                 className="link link-nav"
                 target="_blank"
                 rel="noreferrer"
-                href="https://drive.google.com/file/d/19gQDnWKFqUQXbqjlYVvHui2NlsiumctN/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ZKQhlbxNSm-GzeZL9OsFg0EgB_aytFhp/view?usp=sharing"
               >
                 Resume
               </a>

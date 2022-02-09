@@ -2,7 +2,6 @@ import { Grid } from "@mui/material";
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import aboutMe from "../../../images/aboutMe.png";
-import { HashLink } from "react-router-hash-link";
 
 const AboutMe = () => {
   return (
@@ -81,7 +80,7 @@ const AboutMe = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://drive.google.com/file/d/19gQDnWKFqUQXbqjlYVvHui2NlsiumctN/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ZKQhlbxNSm-GzeZL9OsFg0EgB_aytFhp/view?usp=sharing"
             >
               <button className="hovered-btn">Resume</button>
             </a>
