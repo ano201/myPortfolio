@@ -5,7 +5,7 @@ import DeleteProject from "./DeleteProject/DeleteProject";
 const Deletion = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/projects")
+    fetch("https://infinite-ridge-52082.herokuapp.com/projects")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
@@ -15,7 +15,7 @@ const Deletion = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to Delete?");
     if (proceed) {
-      const url = `http://localhost:5000/projects/${id}`;
+      const url = `https://infinite-ridge-52082.herokuapp.com/projects/${id}`;
       fetch(url, {
         method: "DELETE",
       })
