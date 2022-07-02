@@ -8,7 +8,7 @@ const LeftAside = () => {
   let x = 1;
 
   return (
-    <Box sx={{ position: "absolute", mt: 12 }}>
+    <Box sx={{ position: "absolute", mt: 13 }}>
       <Grid
         sx={{
           width: "2rem",

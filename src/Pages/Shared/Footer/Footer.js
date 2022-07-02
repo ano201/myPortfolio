@@ -8,6 +8,8 @@ import linkedIn from "../../../images/Social/LinkedIN.svg";
 import github from "../../../images/Social/Github.svg";
 
 const Footer = () => {
+  const date = new Date();
+
   return (
     <Box>
       <Container sx={{ flexGrow: 1, mt: "10rem", mb: "5rem" }}>
@@ -120,7 +122,7 @@ const Footer = () => {
         display="block"
         sx={{ textAlign: "center" }}
       >
-        &copy;2022 Murad.
+        &copy;{date.getYear() + 1900} Murad.
       </Typography>
     </Box>
   );

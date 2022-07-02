@@ -18,7 +18,7 @@
   width: 200px !important;
   height: 60px !important;
   font-size: 25px !important;
-border: 1px solid #4df1aa !important;
+  border: 1px solid #4df1aa !important;
   color: #A3E4D7 !important;
   background-color: #0a192f !important;
   border-radius: 3px !important;
@@ -39,7 +39,9 @@ border: 1px solid #4df1aa !important;
   font-weight: bold;
 }
 
-.link:link, .link:active, .link:visited {
+.link:link,
+.link:active,
+.link:visited {
   color: #4df1aa;
 }
 
@@ -60,14 +62,23 @@ border: 1px solid #4df1aa !important;
 img {
   width: 100%;
 }
-.closed{
-    display: none !important;
+
+.closed {
+  display: none !important;
 }
 
-.close-icon{
-    animation: 1s transformation;
+.close-icon {
+  animation: 1s transformation;
 }
+
 @keyframes transformation {
-    0%,100%{transform: rotate(0deg)}
-    50%{transform: rotate(90deg)}
+
+  0%,
+  100% {
+    transform: rotate(0deg)
+  }
+
+  50% {
+    transform: rotate(90deg)
+  }
 }

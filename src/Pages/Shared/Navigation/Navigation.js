@@ -33,7 +33,7 @@ const Navigation = () => {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar style={{ background: "#0a192f8e" }} position="fixed">
+        <AppBar style={{ background: "#0a192f" }} position="fixed">
           <Toolbar>
             <Grid
               sx={{
