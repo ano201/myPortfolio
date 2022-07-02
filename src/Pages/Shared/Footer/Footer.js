@@ -51,7 +51,8 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              rel="noreferrer" target="_blank"
+              rel="noreferrer"
+              target="_blank"
               href="https://www.facebook.com/murad.hossain201"
             >
               <img src={facebook} alt="" />
@@ -60,7 +61,8 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              rel="noreferrer" target="_blank"
+              rel="noreferrer"
+              target="_blank"
               href="https://www.linkedin.com/in/murad72342/"
             >
               <img src={linkedIn} alt="" />
@@ -69,19 +71,30 @@ const Footer = () => {
           <Grid>
             <a
               className="link"
-              rel="noreferrer" target="_blank"
+              rel="noreferrer"
+              target="_blank"
               href="https://twitter.com/Muradmt201"
             >
               <img src={twitter} alt="" />
             </a>
           </Grid>
           <Grid>
-            <a className="link" rel="noreferrer" target="_blank" href="https://github.com/ano201">
+            <a
+              className="link"
+              rel="noreferrer"
+              target="_blank"
+              href="https://github.com/ano201"
+            >
               <img src={github} alt="" />
             </a>
           </Grid>
         </Grid>
-        <a className="link" rel="noreferrer" target="_blank" href="mailto:muradhossain72342@gmail.com">
+        <a
+          className="link"
+          rel="noreferrer"
+          target="_blank"
+          href="mailto:muradhossain72342@gmail.com"
+        >
           <Typography
             className="neon-text"
             variant="h6"
@@ -107,7 +120,7 @@ const Footer = () => {
         display="block"
         sx={{ textAlign: "center" }}
       >
-        &copy;2021 Murad.
+        &copy;2022 Murad.
       </Typography>
     </Box>
   );
